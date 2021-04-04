@@ -1,1 +1,1 @@
-/Users/vsoltan/Documents/src/learn-rust/sorting/target/debug/sorting: /Users/vsoltan/Documents/src/learn-rust/sorting/src/insertion_sort.rs /Users/vsoltan/Documents/src/learn-rust/sorting/src/main.rs
+/home/vsoltan/Documents/learn-rust/sorting/target/debug/sorting: /home/vsoltan/Documents/learn-rust/sorting/src/bubble_sort.rs /home/vsoltan/Documents/learn-rust/sorting/src/insertion_sort.rs /home/vsoltan/Documents/learn-rust/sorting/src/main.rs /home/vsoltan/Documents/learn-rust/sorting/src/merge_sort.rs

@@ -1,19 +1,21 @@
 
-pub fn sort(a: &mut [i32]) {
-    for r in 1..a.len() {
+pub fn sort(v: &mut Vec<i32>) {
+    for r in 1..v.len() {
         let mut l = r - 1; 
-        let key = a[r]; 
-        while a[l] > key {
-            a[l + 1] = a[l]; 
+        let key = v[r]; 
+        let mut oob = false; 
+        while v[l] > key {
+            v[l + 1] = v[l]; 
             if l == 0 {
+                oob = true; 
                 break; 
             }
-            l = l - 1; 
+            l -= 1; 
         }
-        if l == 0 {
-            a[l] = key; 
+        if oob {
+            v[l] = key; 
         } else {
-            a[l + 1] = key; 
+            v[l + 1] = key; 
         }
     }
 }
