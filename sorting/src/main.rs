@@ -26,6 +26,6 @@ fn main() {
     let merged = merge_sort::sort(&mut merge_sort_arr);
     println!("{:?}", merged);
 
-    println!("{:?}", merge_sort::merge(vec![17, 43], vec![88]));
+    // println!("{:?}", merge_sort::merge(vec![17, 43], vec![88]));
 
 }

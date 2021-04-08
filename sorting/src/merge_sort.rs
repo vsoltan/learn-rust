@@ -7,7 +7,7 @@ pub fn merge(m: Vec<i32>, n: Vec<i32>) -> Vec<i32> {
 
     let mut merged_vec : Vec<i32> = vec![]; 
 
-    while num_inserted < m.len() && num_inserted < n.len() {
+    while m_idx < m.len() && n_idx < n.len() {
         if m[m_idx] <= n[n_idx] {
             merged_vec.push(m[m_idx]); 
             m_idx += 1; 
@@ -31,8 +31,6 @@ pub fn merge(m: Vec<i32>, n: Vec<i32>) -> Vec<i32> {
 }
 
 pub fn sort(v: &mut Vec<i32>) -> Vec<i32> {
-    println!("{:?}", v);
-    let l = 0; 
     let r = v.len() - 1; 
     if r == 0 {
         return v.clone(); 
@@ -41,14 +39,11 @@ pub fn sort(v: &mut Vec<i32>) -> Vec<i32> {
         if v[0] > v[1] {
             v.swap(0, 1); 
         }
-        println!("{:?}", v);
         return v.clone(); 
     }
-    let mid = (l + r) / 2; 
     let mut left = v.clone(); 
-    let mut right = left.split_off(mid); 
-    return merge(sort(&mut left),
-                 sort(&mut right));
+    let mut right = left.split_off(r / 2); 
+    return merge(sort(&mut left), sort(&mut right));
 }
 
 
